@@ -6,26 +6,19 @@ nav{
     height: 60px;
     background: #344051;
     position: fixed;
+    z-index: 10;
 }
 
 .logo{
-    float: left;
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 60px;
-    padding-left: 390px;
     -webkit-animation: comming 2s ease;
     -o-animation: comming 2s ease;
     animation: comming 2s ease;
 }
-main{
-    width: 100%;
-    height: 100%;
-}
 .menu{
     float: left;
-    padding-left: 430px;
-    
 }
 
 .menu li{
@@ -33,7 +26,7 @@ main{
     font-size: 16px;
     color: white;
     line-height: 60px;
-    margin-right: 40px;
+    margin-right: 36px;
     text-transform: uppercase;
     -webkit-animation: topshift 0.5s ease forwards;
     -o-animation: topshift 0.5s ease forwards;
@@ -41,14 +34,18 @@ main{
     opacity: 0;
 }
 .menu li a{
+    text-decoration: none;
     transition: all 0.3s;
     color: white;
     transform: scale(1);
     display: inline-block;
+    
 }
+
 .menu li a:visited{
     color: white;
 }
+
 .menu li a:hover{
     color: #e88604;
 }
@@ -91,43 +88,15 @@ main{
 
 .main{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: url(../img/Парень.png) 90% 100%/auto 85% no-repeat, url(../img/фон.jpg) center/cover no-repeat;
+}
 
-}
-.title__container input{
-    transition: all 0.2s;
-    transform: scale(1);
-}
-.title__container input:hover{
-    background: #344051;
-    color: white;
-}
-.title__container input:active{
-    transform: scale(1.1)
-}
 .title__container{
-    float: left;
-    margin: 404px 0px 0px 432px;
+   
     color: #2c384a;
     text-align: center;
-    opacity: 0;
-    -webkit-animation: titlemove 0.8s ease forwards;
-    -o-animation: titlemove 0.8s ease forwards;
-    animation: titlemove 0.8s ease forwards;
-    -webkit-animation-delay: 2.4s;
-    -o-animation-delay: 2.4s;
-    animation-delay: 2.4s;
-}
-@keyframes titlemove{
-    from{
-        opacity: 0;
-        margin-left: -500px;
-    }
-    to{
-        opacity: 1;
-        margin-left: 404px;
-    }
+  
 }
 
 
@@ -155,8 +124,39 @@ main{
     font-size: 13px;
     cursor: pointer;
     margin: 50px 14px 0px 14px;
+}
+.title__container input{
+    transition: all 0.2s;
+    transform: scale(1);
+}
+.title__container input:hover{
+    background: #344051;
+    color: white;
+}
+.title__container input:active{
+    transform: scale(1.1)
+}
+
+@keyframes titlemove {
+    from {
+        margin-left: -300px;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
+.title__container {
+    opacity: 0;
+    animation: titlemove 0.4s ease forwards;
+    animation-delay: 3s;
     
 }
+
+
 
 .about_me_container h2{
     text-align: center;
@@ -169,26 +169,34 @@ main{
 }
 
 .about_me_container{
-    width: 740px;
-    margin: 0 auto;
+    
     padding-bottom: 100px;
 }
 .about_me_container img{
     display: block;
     margin: 0 auto;
-}
+ }
+
 .about_me_container hr{
     height: 4px;
     border: none;
     background: #d17700;
     width: 80px;
     margin: 0 auto 60px;
+    opacity: 1;
+    
 }
 
 .about_me_container p{
     margin-top: 24px;
     font-size: 17px;
     
+}
+
+@media (max-width: 740px){
+    .about_me_container p{
+        text-align: center;
+    }
 }
 
 .about_me_container .secondText{
@@ -207,8 +215,8 @@ main{
     font-size: 16px;
     background: url(../img/иконка.png) 6%/auto no-repeat;
     padding-left: 18px;
-    transform: scale(1);
-    transition: all 0.3s;
+    color: black;
+    text-decoration: none;
     
 }
 .about_me_container a:active{
@@ -219,8 +227,6 @@ main{
     background: url(../img/ФонЧТ.jpg) center/cover no-repeat;
 }
 .skills_container{
-    width: 1094px;
-    margin: 0 auto;
     padding-top: 110px;
     padding-bottom: 96px;
 }
@@ -239,16 +245,11 @@ main{
     background: #d17700;
     width: 80px;
     margin: 0 auto 100px;
-}
-.skills_item{
-    float: left;
-    width: 200px;
-    text-align: center;
-    margin: 0 36px;
+    opacity: 1;
 }
 
 .skills_item img{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     height: 40px;
 }
 .skills_item h3{
@@ -263,19 +264,14 @@ main{
     clear:both;
 }
 
+
 .case{
     padding-top: 110px;
     padding-bottom: 128px;
 }
 
 .case_container{
-    width: 1170px;
-    margin: 0 auto;
     
-}
-.case_container p{
-        text-align: center;
-    margin-bottom: 40px;
 }
 .case_container h2{
     text-align: center;
@@ -293,6 +289,8 @@ main{
     background: #d17700;
     width: 80px;
     margin: 0 auto 40px;
+    opacity: 1;
+    
 }
 
 .case_subscription{
@@ -307,9 +305,7 @@ main{
 }
 
 .description_left{
-    width: 200px;
-    float: left;
-    margin-right: 82px;
+   
 }
 .description_left h3{
     font-size: 25px;
@@ -332,18 +328,8 @@ main{
     color: white;
     font-size: 20px;
     border-radius: 8px;
-    transform: scale(1);
-    transition: all 0.3s;
-    
+    text-decoration: none;
 }
-.description_left a:active{
-    transform: scale(1.1);
-}
-.description_left a:hover{
-    background-color: #5e6e70;
-    color: #63b5ae;
-}
-
 .description_right h4{
     font-size: 25px;
     margin-bottom: 10px;
@@ -352,54 +338,61 @@ main{
     font-size: 20px;
 
 }
-
+.description_left a:active{
+    transform: scale(1.1);
+}
+.description_left a:hover{
+    background-color: #5e6e70;
+    color: #63b5ae;
+}
 .cost{
     padding-bottom: 84px;
 }
 .cost_container{
-    width: 1080px;
+    max-width: 1080px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
-    margin: 0 auto;
+
     padding-top: 74px;
 }
 
 .cost_container h2{
      text-align: center;
-    font-weight: 600;
-    width: 400px;
+    max-width: 358px;
     font-size: 43px;
     margin: 0px auto 50px;
     
 }
-.cost_container{
-    width: 890px;
+.cost_inner{
+    max-width: 890px;
     margin: 0 auto;
     padding-bottom: 50px;
 }
 
-.cost_container h3{
-    font-weight: 600;
+.cost_inner h3{
     font-size: 29px;
     text-transform: uppercase;
     margin-bottom: 24px;
 }
-.cost_container select{
+.cost_inner select{
     margin-bottom: 44px;
 }
 
-.cost_container hr{
+.cost_inner hr{
     height: 2px;
     border: none;
     background: #eee;
     width: 100%;
     margin: 0 auto 24px;
+    opacity: 1;
+    
 }
 
 .mySelect{
     display: block;
-    width: 890px;
+    width: 100%;
+    max-width: 890px;
     height: 54px;
     background: #eeeeee;
     padding-left: 24px;
@@ -411,21 +404,40 @@ main{
 }
 
 .days, .price{
-    margin-bottom: 18px;
+    margin-bottom: 0px;
     font-size: 21px;
-    font-weight: 700;
     
 }
-.cost_footer .zero{
-    font-size: 29px;
-    float: right;
+.cost_footer p{
+    margin-bottom: 0;
 }
-}
-
 .cost_footer .text{
     float: left;
 }
 
+.cost_footer .zero{
+    font-size: 29px;
+    float: right;
+}
+
+.cost_footer button a{
+    width: 200px;
+    display: block;
+    background: #63b5ae;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.cost_footer button a:hover {
+    background: #4e938d; 
+}
+.cost_footer button a:active{
+    transform: scale(1.1);
+}
 
 .statistic{
     background: url(../img/ФонСТ.jpg) center/cover fixed no-repeat;
@@ -433,17 +445,16 @@ main{
 
 
 .statistic_container{
-    width: 1024px;
     margin: 0 auto;
     padding-bottom: 100px;
 }
 
 .statistic_container h2{
       text-align: center;
-    width: 390px;
+    max-width: 390px;
     font-size: 33px;
-    margin: 0 auto 125px;
-    padding-bottom: 40px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
     text-transform: uppercase;
     padding-top: 100px;
 }
@@ -454,13 +465,13 @@ main{
     background: #d17700;
     width: 80px;
     margin: 0 auto 90px;
+    opacity: 1;
+    
 }
 
 
 .statistic_item{
-    display: inline-block;
-    width: 250px;
-    text-align: center;
+  
 }
 .statistic_item img{
     height: 54px;
@@ -482,7 +493,7 @@ main{
 }
 
 .comments_container{
-    width: 700px;
+    width: 100%;
     margin-top: 110px;
     margin: 0 auto;
     padding-bottom: 140px;
@@ -490,7 +501,7 @@ main{
 
 .comments_container h2{
      text-align: center;
-    width: 390px;
+    width: 100%;
     font-size: 33px;
     margin: 0px auto 30px;
     padding-bottom: 5px;
@@ -504,6 +515,7 @@ main{
     background: #d17700;
     width: 80px;
     margin: 0 auto 60px;
+    opacity: 1;
 }
 
 .comments{
@@ -514,19 +526,14 @@ main{
     margin-bottom: 36px;
 }
 
-.comments_text{
+.comments{
     font-size: 17px;
     line-height: 24px;
     margin-bottom: 36px;
 }
-
-.comments_author{
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.comments_author span{
+.comments span{
     font-weight: 800;
+    
 }
 
 .contacts{
@@ -535,14 +542,12 @@ main{
 }
 
 .contacts_container{
-    width: 734px;
-    margin: 0 auto;
     padding-bottom: 68px;
 }
 
 .contacts_container h2{
     text-align: center;
-    width: 390px;
+    max-width: 390px;
     font-size: 33px;
     margin: 0px auto 30px;
     padding-bottom: 5px;
@@ -556,6 +561,8 @@ main{
     background: #d17700;
     width: 80px;
     margin: 0 auto 32px;
+    opacity: 1;
+    
 }
 
 .contacts_subscription{
@@ -565,11 +572,7 @@ main{
 }
 
 .contacts_data_item{
-    float: left;
-    width: 154px;
-    text-align: center;
-    margin: 0 45px;
-    margin-bottom: 40px;
+
 }
 
 .contacts_data_item img{
@@ -580,27 +583,24 @@ main{
 
 .contacts_data_item p{
     font-size: 16px;
-    
 }
 
 .contacts_container h3{
-    margin: 0px 40px 44px 0px;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 46px;
     font-size: 21px;
     text-transform: uppercase;
 }
 
 .contacts_inputs input{
-    display: block;
-    width: 352px;
-    float: left;
     height: 34px;
-    padding-left: 14px;
     margin-bottom: 14px;
-    margin-right: 15px;
     background: rgba(210, 214, 220, 0.93);
     font-size: 16px;
+    width: 100%;
+    padding-left: 15px;
 }
-
 
 .contacts_inputs .secondInput{
     float: right;
@@ -608,7 +608,7 @@ main{
 
 .contacts_container textarea{
     display: block;
-    width: 721px;
+    width: 100%;
     resize: none;
     padding-top: 10px;
     padding-left: 15px;
@@ -628,9 +628,21 @@ main{
     border-radius: 8px;
     font-size: 20px;
     margin-bottom: 76px;
-    transform: scale(1);
-    transition: all 0.3s;
 }
+
+.contacts_social{
+    
+}
+
+.contacts_social a{
+    display: inline-block;
+
+    margin: 0 auto;
+}
+.contacts_social img{
+    height: 30px;
+}
+
 .contacts_container input[type="submit"]:hover{
     background: white;
     color: #0f192a;
@@ -639,30 +651,10 @@ main{
     transform: scale(1.1);
 }
 
-.contacts_social{
-    width: 450px;
-    margin: 0 auto;
-    
-}
-
-.contacts_social a{
-    display: block;
-    float: left;
-    margin: 0 20px;
-    transform: scale(1);
-    transition: all 0.3s;
-}
-.contacts_social:active{
-    transform: scale(1.1);
-}
-
-.contacts_social img{
-    height: 30px;
-}
 .map img{
     display: block;
     width: 100%;
-    height: 348px;
+    height: 350px;
 }
 
 .footer{
@@ -675,4 +667,27 @@ main{
     line-height: 94px;
     color: white;
 }
+@media (max-width: 991px){
+    .title__container, .title__container h4, .title__container input{
+        color: white;
+    }
+    .main{
+        position: relative;
+    }
+    .main:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 1;
+    }
+    .title__container{
+        position: relative;
+        z-index: 2;
+    }
+}
+
 
