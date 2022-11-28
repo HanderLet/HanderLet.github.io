@@ -400,7 +400,7 @@ nav{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background:  url(../img/select.png) 98% 54%/auto no-repeat, #eee;
+    background: #eee;
 }
 
 .days, .price{
