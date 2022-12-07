@@ -52,6 +52,10 @@ nav{
 .menu li a:active{
     transform: scale(1.1);
 }
+.menu li a.active{
+    color: darkorange;
+}
+
 @keyframes comming{
     from{
         opacity: 0;
@@ -526,11 +530,17 @@ nav{
     margin-bottom: 36px;
 }
 
-.comments{
+.comm_text{
     font-size: 17px;
     line-height: 24px;
     margin-bottom: 36px;
 }
+
+.comm_author{
+    font-size: 16px;
+    line-height: 24px;
+}
+
 .comments span{
     font-weight: 800;
     
@@ -689,5 +699,12 @@ nav{
         z-index: 2;
     }
 }
-
-
+.carousel-control-next, .carousel-control-prev {
+    height: 70%;
+}
+#carouselExampleIndicators .carousel-indicators {
+    margin-bottom: -10px;
+}
+#carouselExampleIndicators .carousel-indicators [data-bs-target]{
+    background-color: #ff6c00;
+}
