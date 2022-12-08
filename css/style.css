@@ -11,7 +11,7 @@ nav{
 
 .logo{
     color: #fff;
-    font-size: 20px;
+    font-size: 23px;
     line-height: 60px;
     -webkit-animation: comming 2s ease;
     -o-animation: comming 2s ease;
@@ -485,6 +485,10 @@ nav{
     font-weight: 800;
     margin: 34px 0;
 }
+.statistic_item h3 .runNumbers {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
 
 .statistic_item p{
     font-size: 17px;
@@ -707,4 +711,12 @@ nav{
 }
 #carouselExampleIndicators .carousel-indicators [data-bs-target]{
     background-color: #ff6c00;
+}
+
+.element-animation{
+     opacity: 0;
+}
+.element-animation.element-show{
+    opacity: 1;
+    transition: opacity 1s;
 }
