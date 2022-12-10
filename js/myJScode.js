@@ -31,7 +31,6 @@ $('a[href^="#"]').click(function(){
 });
 
 $(document).ready(function() {
-  $('.cube, .top').fadeOut();
     $("select").on("change", function(){
         let summ = parseInt($("#style option:selected").val()) + parseInt($("#design option:selected").val()) + parseInt($("#adaptive option:selected").val());
         let days = parseInt($("#style option:selected").attr("days")) + parseInt($("#design option:selected").attr("days")) + parseInt($("#adaptive option:selected").attr("days"));
@@ -65,12 +64,14 @@ let optionsStat = {
     };
     let observerStat = new IntersectionObserver(onEntryStat, optionsStat);
     let elementsStat = $('.runNumbers');
+    let flag = true;
 
     elementsStat.each((i, el) => {
         observerStat.observe(el);
     });
 
 function onEntryStat(entry) {
+    if (flag === true){
     entry.forEach(change => {
         if (change.isIntersecting) {
             $(".runNumbers").each(function(){
@@ -80,12 +81,14 @@ function onEntryStat(entry) {
             duration:4000,
             easing:'swing',
             step:function(now){
-            $(this).text(Math.ceil(now));
+            $(this).text(Math.--ceil(now));
+            flag = false;
        }
             });
         });
       }
    });
+    }
 }
 
 setTimeout(function () {
