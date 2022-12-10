@@ -60,36 +60,29 @@ $('.image-link').magnificPopup({
 
     
 let optionsStat = {
-        threshold: [0.5]
-    };
-    let observerStat = new IntersectionObserver(onEntryStat, optionsStat);
-    let elementsStat = $('.runNumbers');
-    let flag = true;
+            threshold: [0.5]
+        };
+        let observerStat = new IntersectionObserver(onEntryStat, optionsStat);
+        let elementsStat = $('.runNumbers');
 
-    elementsStat.each((i, el) => {
-        observerStat.observe(el);
-    });
-
-function onEntryStat(entry) {
-    if (flag === true){
-    entry.forEach(change => {
-        if (change.isIntersecting) {
-            $(".runNumbers").each(function(){
-            $(this).prop('Counter',0).animate({
-            Counter:$(this).text()
-        },{
-            duration:4000,
-            easing:'swing',
-            step:function(now){
-            $(this).text(Math.ceil(now));
-            flag = false;
-       }
-            });
+        elementsStat.each((i, el) => {
+            observerStat.observe(el);
         });
-      }
-   });
-    }
-}
+
+
+        function onEntryStat(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                    if(!$('.runNumbers').hasClass("done")){
+                        $('.runNumbers').addClass("done");
+                        $('.runNumbers').spincrement({
+                         thousandSeparator: "",
+                         duration: 3000
+                    });
+                  }
+                }
+            });
+        }
 
 setTimeout(function () {
     const modalWindow = new bootstrap.Modal('#exampleModalToggle', {
