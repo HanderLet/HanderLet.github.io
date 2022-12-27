@@ -1,27 +1,7 @@
 $(document).ready(function(){
     $(".area").css("display", "none");
-});
-
-
-$(document).ready(function(){
-            let options = {
-            threshold: [0.5]
-        };
-        let observer = new IntersectionObserver(onEntry, options);
-        let elements = $('.element-animation');
-
-        elements.each((i, el) => {
-            observer.observe(el);
-        });
-
-
-        function onEntry(entry) {
-            entry.forEach(change => {
-                if (change.isIntersecting) {
-                    change.target.classList.add('element-show');
-                }
-            });
-        }
+    
+    new WOW().init();
 });
 
 
@@ -59,6 +39,8 @@ $('.image-link').magnificPopup({
 });
 
     
+
+
 let optionsStat = {
             threshold: [0.5]
         };
@@ -84,10 +66,35 @@ let optionsStat = {
             });
         }
 
+
+ let optionsImg = {
+            threshold: [0.5]
+        };
+        let observerImg = new IntersectionObserver(onEntryImg, optionsImg);
+        let elementsImg = $('.preloadImg');
+
+        elementsImg.each((i, el) => {
+            observerImg.observe(el);
+        });
+
+
+        function onEntryImg(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                    change.target.src = change.target.dataset.src;
+                }
+            });
+        }
+
+
 setTimeout(function () {
     const modalWindow = new bootstrap.Modal('#exampleModalToggle', {
         keyboard: false
     });
         modalToggle = document.getElementById('exampleModalToggle'); 
         modalWindow.show(modalToggle);
-    }, 10000);
+    }, 30000);
+
+
+
+    $("#inputTel").mask("+7(999)-999-99-99");

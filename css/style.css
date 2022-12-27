@@ -93,7 +93,7 @@ nav{
 .main{
     width: 100%;
     height: 100vh;
-    background: url(../img/Парень.png) 90% 100%/auto 85% no-repeat, url(../img/фон.jpg) center/cover no-repeat;
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/background.jpg) center/cover no-repeat;
 }
 
 .title__container{
@@ -157,7 +157,6 @@ nav{
     opacity: 0;
     animation: titlemove 0.4s ease forwards;
     animation-delay: 3s;
-    
 }
 
 
@@ -169,11 +168,9 @@ nav{
     margin: 110px auto 30px;
     padding-bottom: 5px;
     text-transform: uppercase;
-    
 }
 
 .about_me_container{
-    
     padding-bottom: 100px;
 }
 .about_me_container img{
@@ -217,18 +214,22 @@ nav{
     line-height: 30px;
     margin: 40px auto 0;
     font-size: 16px;
-    background: url(../img/иконка.png) 6%/auto no-repeat;
-    padding-left: 18px;
     color: black;
     text-decoration: none;
-    
 }
+.about_me_container span{
+    padding-left: 4px;
+}
+.about_me_container .fa{
+    padding-top: 3px;
+}
+
 .about_me_container a:active{
     transform: scale(1.1);
 }
 
 .skills{
-    background: url(../img/ФонЧТ.jpg) center/cover no-repeat;
+    background: url(../img/backgroundA.jpg) center/cover no-repeat;
 }
 .skills_container{
     padding-top: 110px;
@@ -444,7 +445,7 @@ nav{
 }
 
 .statistic{
-    background: url(../img/ФонСТ.jpg) center/cover fixed no-repeat;
+    background: url(../img/backgroundB.jpg) center/cover fixed no-repeat;
 }
 
 
@@ -551,9 +552,10 @@ nav{
 }
 
 .contacts{
-    background: url(../img/Фонпр.jpg) center/cover no-repeat;
+    background: url(../img/backgroundC.jpg) center/cover no-repeat;
     color: white;
 }
+
 
 .contacts_container{
     padding-bottom: 68px;
@@ -584,7 +586,6 @@ nav{
     font-size: 16px;
     margin-bottom: 48px;
 }
-
 .contacts_data_item{
 
 }
@@ -598,6 +599,7 @@ nav{
 .contacts_data_item p{
     font-size: 16px;
 }
+
 
 .contacts_container h3{
     margin-top: 40px;
@@ -644,15 +646,17 @@ nav{
     margin-bottom: 76px;
 }
 
-.contacts_social{
-    
+.contacts a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .contacts_social a{
     display: inline-block;
-
     margin: 0 auto;
 }
+
 .contacts_social img{
     height: 30px;
 }
@@ -665,11 +669,6 @@ nav{
     transform: scale(1.1);
 }
 
-.map img{
-    display: block;
-    width: 100%;
-    height: 350px;
-}
 
 .footer{
     background: #354051;
@@ -702,6 +701,9 @@ nav{
         position: relative;
         z-index: 2;
     }
+    .main{
+        background: url(../img/background.jpg) center/cover no-repeat;
+    }
 }
 .carousel-control-next, .carousel-control-prev {
     height: 70%;
@@ -711,12 +713,4 @@ nav{
 }
 #carouselExampleIndicators .carousel-indicators [data-bs-target]{
     background-color: #ff6c00;
-}
-
-.element-animation{
-     opacity: 0;
-}
-.element-animation.element-show{
-    opacity: 1;
-    transition: opacity 1s;
 }
